@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/events.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html,
+        body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            background-color: black;
+        }
+
+        .main-row {
+            flex-grow: 1;
+            display: flex;
+            overflow: auto;
+        }
+
+        .left-div {
+            width: 300px;
+            background-color: black;
+            /* height: 100%;
+            position: fixed;             */
+            /* position: sticky;
+            top: 0px; */
+            
+        }
+
+        .right-div {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+        }
+
+        .navbar {
+            height: 55px;
+            background-color: black;
+            position: sticky;
+            top: 0px;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            background-color: black;
+        }
+
+        .footer-row {
+            height: 55px;
+            flex-shrink: 0;
+            background-image: linear-gradient(to right, #ff33ff , #66ccff);
+            position: sticky;
+            bottom: 0px;
+        }
+
+        .home-section {
+            padding: 20px;
+        }
+
+        .home-section h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .inner-navbar {
+            display: flex;
+            position: sticky;
+            top: 55px;
+        }
+
+        .tab {
+            padding: 10px;
+        }
+
+        .tab:hover {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-row">
+            <div class="left-div">
+                <!-- sidebar -->
+                <h2><i class="fa-brands fa-spotify"></i> Spotify</h2>
+                <ul class="list">
+                    <li>
+                        <a href="#">
+                            <i class="fa-sharp fa-solid fa-house" style="color:white"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-magnifying-glass" style="color: white ;"></i>
+                            <span>Search</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-book" style="color: white ;"></i>
+                            <span>Your Library</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-regular fa-plus" style="color: white;"></i>
+                            <span>Create playlist</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-heart" style="color:white"></i>
+                            <span>Liked songs</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="right-div">
+                <!-- Navbar -->
+                <div class="navbar">
+
+                    <i class="fa-solid fa-less-than fa-sharp lessthan" id="lessthan"></i>
+                    <i class="fa-sharp fa-solid fa-greater-than greaterthan" id="greaterthan"></i>
+                    <button class="login" id="login">Log in</button>
+                    <button class="signup" id="signup">Signup</button>
+
+
+                </div>
+
+                <!-- Main content -->
+                <div class="main-content">
+                    <div class="header1">
+                        <h2>India's Best</h2>
+                        <p style="margin-right: 20px;">SEE ALL</p>
+                    </div>
+                    <br>
+                    <div class="class-container">
+                        <div class="card">
+                            <div class="card-image"><img src="images/bollywood.jfif" alt="Bollywood" width="200px" height="200px"></div>
+                            <h5>Bollywood Butter</h5>
+                            <p>The finest quality of Bollywood music ...</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-image"><img src="images/punjabi.jfif" alt="Punjabi" width="200px" height="200px"></div>
+                            <h5>Punjabi 101</h5>
+                            <p>The finest quality of Punjabi music ...</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-image"><img src="images/kollywood.jfif" alt="Kollywood" height="200px" width="200px"></div>
+                            <h5>Kollywood Cream</h5>
+                            <p>The finest quality of Kollywood music ...</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-image"><img src="images/tollywood.jfif" alt="Tollywood" height="200px" width="200px"></div>
+                            <h5>Tollywood Pearls</h5>
+                            <p>The finest quality of Tollywood music ...</p>
+                        </div>
+    
+                    </div>
+
+                    <br><br><br><br><br><br><br><br>
+
+                    <div class="header1">
+                        <h2>India's Best</h2>
+                        <p style="margin-right: 20px;">SEE ALL</p>
+                    </div>
+                    <div class="class-container">
+                        <div class="card">
+                            <div class="card-image"><img src="images/bollywood.jfif" alt="Bollywood" width="200px" height="200px"></div>
+                            <h5>Bollywood Butter</h5>
+                            <p>The finest quality of Bollywood music ...</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-image"><img src="images/punjabi.jfif" alt="Punjabi" width="200px" height="200px"></div>
+                            <h5>Punjabi 101</h5>
+                            <p>The finest quality of Punjabi music ...</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-image"><img src="images/kollywood.jfif" alt="Kollywood" height="200px" width="200px"></div>
+                            <h5>Kollywood Cream</h5>
+                            <p>The finest quality of Kollywood music ...</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-image"><img src="images/tollywood.jfif" alt="Tollywood" height="200px" width="200px"></div>
+                            <h5>Tollywood Pearls</h5>
+                            <p>The finest quality of Tollywood music ...</p>
+                        </div>
+    
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-row" style="padding: 10px; ">
+            <div style="padding: 5px; display:inline ">
+                <div style="color: white; display:inline;">Preview of spotify</div> <br>
+                <div style="color:white; display: inline;">Sign up to get unlimited songs and podcast with occasional ads. No credit card needed</div>
+            </div>
+            <button id="footbtn">Sign up free</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+.nav {
+    height: 55px;
+    background-color: black;
+    width: inherit;
+    position:fixed;
+    top: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+
+.login:hover,
+.signup:hover {
+    background-color: white;
+    cursor: pointer;
+    color: black;
+
+}
+
+.lessthan,
+.greaterthan {
+    color: white;
+    margin: 1.5%;
+}
+
+.lessthan:hover, .greaterthan:hover {
+    cursor: pointer;
+}
+
+.login,
+.signup {
+    float: right;
+    margin: 10px;
+    margin-right: 3%;
+    size: 20px;
+    background-color: transparent;
+    color: white;
+    width: 70px;
+    height: 35px;
+    border-radius: 15px;
+
+}
+
+#footbtn{
+    float: right;
+    margin-right: 50px;
+    margin-top: -10px;;
+    height: 40px;
+    width: 90px;
+    background-color: white;
+    font-weight: 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+.sidebar{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.sidebar h2{
+    text-align: center;
+    color: white;
+    padding: 20px;
+
+}
+
+.left-div h2{
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.left-div ul{
+    list-style-type: none;
+}
+
+
+.sidebar ul li {
+    margin: 25px 0;
+    text-decoration: none;
+}
+
+.left-div ul li{
+    margin: 25px 0px;
+}
+
+.sidebar ul li a{
+    color: white;
+    padding: 0 30px;
+}
+
+.left-div ul li a{
+    color: white;
+    padding: 0px 30px;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover{
+    margin-left: 20px;
+    transition: 0.4s;
+}
+
+.left-div ul li a:hover{
+    margin-left: 20px;
+    transition: 0.4s;
+}
+
+.header1{
+    background-color: black;
+    /* margin-top: 15px; */
+    height: 50px;
+    
+    
+}
+.header1 h2{
+    color: white;
+    display: inline;
+    padding: auto;
+    
+}
+
+.header1 p{
+    float: right;
+    color: white;
+}
+
+.class-container{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    background-color: black;
+    width: 200px;
+    height: 250px;
+    margin: 0px 40px;
+    border-radius: 15px;
+}
+
+.card-image img{
+    
+    height: 250px;
+    margin-bottom: 5px;
+    border-radius: 15px 15px 0 0;
+
+}
+
+.card h5{
+    color: white;
+    margin-left: 5px;
+}
+
+.card p{
+    color: white;
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: small;
+}
+
+.card:hover{
+    transform: scale(1.03);
+    transition: all 0.5s ease;
+
+}
+
